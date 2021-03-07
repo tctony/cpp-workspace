@@ -9,10 +9,9 @@ load_deps_if_needed({
         "sha256": "97e70364e9249702246c0e9444bccdc4b847bed1eb03c5a3ece4f83dfe6abc44",
     },
     "rules_foreign_cc": {
-        "strip_prefix": "rules_foreign_cc-74b146dc87d37baa1919da1e8f7b8aafbd32acd9",
-        # 2020-05-08
-        "url": "https://github.com/bazelbuild/rules_foreign_cc/archive/74b146dc87d37baa1919da1e8f7b8aafbd32acd9.zip",
-        "sha256": "2de65ab702ebd0094da3885aae2a6a370df5edb4c9d0186096de79dffb356dbc",
+        "strip_prefix": "rules_foreign_cc-0.1.0",
+        "url": "https://github.com/bazelbuild/rules_foreign_cc/archive/0.1.0.zip",
+        "sha256": "c2cdcf55ffaf49366725639e45dedd449b8c3fe22b54e31625eb80ce3a240f1e",
     },
     "rules_proto": {
         "sha256": "6117a0f96af1d264747ea3f3f29b7b176831ed8acfd428e04f17c48534c83147",
@@ -34,7 +33,7 @@ load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependen
 rules_foreign_cc_dependencies()
 
 # https://github.com/protocolbuffers/protobuf
-# v3.11.3
+# v3.15.5
 # use local protobuf for rules_proto
 local_repository(
     name = "com_google_protobuf",
@@ -81,9 +80,10 @@ bind(
     actual = "@gtest_local//:gtest_main",
 )
 
-# https://github.com/grpc/grpc@v1.28.1
+# https://github.com/grpc/grpc
+# v1.36.1
 local_repository(
-    name = "com_github_grpc_grpc",  # 1.28.1
+    name = "com_github_grpc_grpc",
     path = "../lib/grpc",
 )
 

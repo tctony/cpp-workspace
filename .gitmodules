@@ -1,3 +1,15 @@
 [submodule "3rd/fsmlite"]
 	path = 3rd/fsmlite
 	url = https://github.com/build-with-bazel/fsmlite
+[submodule "tools/bazel"]
+	path = tools/bazel
+	url = https://github.com/tctony/bazel_scripts.git
+[submodule "tools/bazel_compile_commands"]
+	path = tools/bazel_compile_commands
+	url = https://github.com/tctony/bazel_compile_commands
+[submodule "base"]
+	path = base
+	url = https://github.com/tctony/cpp-base.git
+[submodule "demo"]
+	path = demo
+	url = https://github.com/tctony/cpp-demo.git
