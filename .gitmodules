@@ -1,0 +1,3 @@
+[submodule "3rd/fsmlite"]
+	path = 3rd/fsmlite
+	url = https://github.com/build-with-bazel/fsmlite

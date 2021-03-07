@@ -109,6 +109,12 @@ local_repository(
     path = "../lib/ThreadPool",
 )
 
+# https://github.com/build-with-bazel/fsmlite
+local_repository(
+    name = "fsmlite",
+    path = "../lib/fsmlite",
+)
+
 load("//tools/bazel_compile_commands:deps_load.bzl", "bazel_compile_commands_deps_load")
 
 bazel_compile_commands_deps_load()
