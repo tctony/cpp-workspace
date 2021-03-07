@@ -46,7 +46,7 @@ rules_proto_dependencies()
 
 rules_proto_toolchains()
 
-# https://github.com/tctony/build_openssl_with_bazel.git
+# https://github.com/build-with-bazel/openssl.git
 # 1.1.1
 local_repository(
     name = "openssl",
@@ -96,14 +96,14 @@ load("@com_github_grpc_grpc//bazel:grpc_extra_deps.bzl", "grpc_extra_deps")
 grpc_extra_deps()
 
 
-# https://github.com/tctony/build_asio_with_bazel.git
+# https://github.com/build-with-bazel/asio.git
 # asio 1.16
 local_repository(
     name = "asio",
     path = "../lib/asio",
 )
 
-# https://github.com/tctony/ThreadPool.git@build_with_bazel
+# https://github.com/build-with-bazel/ThreadPool.git@build_with_bazel
 local_repository(
     name = "ThreadPool",
     path = "../lib/ThreadPool",
