@@ -115,6 +115,13 @@ local_repository(
     path = "../lib/fsmlite",
 )
 
+# https://github.com/build-with-bazel/lsignal
+# 59f6843dc2905626d637d17472fa2452c5936bfc
+local_repository(
+    name = "lsignal",
+    path = "../lib/lsignal",
+)
+
 load("//tools/bazel_compile_commands:deps_load.bzl", "bazel_compile_commands_deps_load")
 
 bazel_compile_commands_deps_load()
