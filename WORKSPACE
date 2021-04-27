@@ -61,7 +61,7 @@ local_repository(
 )
 
 # https://github.com/abseil/abseil-cpp
-# 20200225.1
+# lts_2021_03_24
 local_repository(
     name = "abseil",
     path = "../lib/abseil-cpp",
