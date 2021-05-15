@@ -54,9 +54,9 @@ local_repository(
 )
 
 # https://github.com/google/boringssl
-# master-with-bazel, 57c37a99b6a9f523b10344b7b6b93ce9ad1da795 
+# master-with-bazel, 57c37a99b6a9f523b10344b7b6b93ce9ad1da795
 local_repository(
-    name = "boringssl", 
+    name = "boringssl",
     path = "../lib/boringssl",
 )
 
@@ -95,7 +95,6 @@ load("@com_github_grpc_grpc//bazel:grpc_extra_deps.bzl", "grpc_extra_deps")
 
 grpc_extra_deps()
 
-
 # https://github.com/build-with-bazel/asio.git
 # asio 1.16
 local_repository(
@@ -125,3 +124,12 @@ local_repository(
 load("//tools/bazel_compile_commands:deps_load.bzl", "bazel_compile_commands_deps_load")
 
 bazel_compile_commands_deps_load()
+
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
+
+new_git_repository(
+    name = "exceptxx",
+    build_file = "//3rd/build_files:exceptxx.BUILD.bzl",
+    commit = "728a61e30ea536e790216e8b5081834de09e3578",
+    remote = "https://github.com/SergiusTheBest/exceptxx.git",
+)
