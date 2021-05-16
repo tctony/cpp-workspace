@@ -1,3 +1,4 @@
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
 load("//tools/bazel:load_tool.bzl", "load_deps_if_needed")
 
 load_deps_if_needed({
@@ -102,30 +103,30 @@ local_repository(
     path = "../lib/asio",
 )
 
-# https://github.com/build-with-bazel/ThreadPool.git@build_with_bazel
-local_repository(
+new_git_repository(
     name = "ThreadPool",
-    path = "../lib/ThreadPool",
+    build_file = "//3rd/build_files:ThreadPool.BUILD.bzl",
+    commit = "e0f9d9f7246ac2872efe63d19ca77151520b4a66",
+    remote = "https://github.com/build-with-bazel/ThreadPool.git",
 )
 
-# https://github.com/build-with-bazel/fsmlite
-local_repository(
+new_git_repository(
     name = "fsmlite",
-    path = "../lib/fsmlite",
+    build_file = "//3rd/build_files:fsmlite.BUILD.bzl",
+    commit = "8808c256901003c1caf480ca68491ee3df17f01c",
+    remote = "https://github.com/build-with-bazel/fsmlite.git",
 )
 
-# https://github.com/build-with-bazel/lsignal
-# 59f6843dc2905626d637d17472fa2452c5936bfc
-local_repository(
+new_git_repository(
     name = "lsignal",
-    path = "../lib/lsignal",
+    build_file = "//3rd/build_files:lsignal.BUILD.bzl",
+    commit = "59f6843dc2905626d637d17472fa2452c5936bfc",
+    remote = "https://github.com/build-with-bazel/lsignal.git",
 )
 
 load("//tools/bazel_compile_commands:deps_load.bzl", "bazel_compile_commands_deps_load")
 
 bazel_compile_commands_deps_load()
-
-load("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
 
 new_git_repository(
     name = "exceptxx",

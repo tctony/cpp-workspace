@@ -1,6 +1,9 @@
 startup --max_idle_secs=0
 
-build --experimental_action_listener=//tools/bazel_compile_commands/actions:generate_compile_commands_listener
+# build --experimental_action_listener=//tools/bazel_compile_commands/actions:generate_compile_commands_listener
+
+# https://github.com/bazelbuild/bazel/issues/4341#issuecomment-758361769
+build --features=-supports_dynamic_linker
 
 build --cxxopt='-std=c++17'
 
