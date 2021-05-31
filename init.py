@@ -12,7 +12,7 @@ local_repos = [
 ]
 
 CLONE = 'git clone {url} --depth 1 --branch {branch} --single-branch {dir}'
-SUBMODULE = 'git submodule update --init'
+SUBMODULE = 'git submodule update --init --depth 1'
 
 if __name__ == '__main__':
   workspace_dir = os.path.dirname(os.path.abspath(__file__))
