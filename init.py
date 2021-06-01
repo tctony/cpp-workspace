@@ -15,10 +15,14 @@ CLONE = 'git clone {url} --depth 1 --branch {branch} --single-branch {dir}'
 SUBMODULE = 'git submodule update --init --depth 1'
 
 if __name__ == '__main__':
+  print("init submodule ...")
+  os.system("git submodule update --init")
+
+  print("init external lib ...")
   workspace_dir = os.path.dirname(os.path.abspath(__file__))
-  print(workspace_dir)
+  print('in ' + workspace_dir)
   lib_dir = os.path.abspath(workspace_dir + '/../lib')
-  print(lib_dir)
+  print('in ' + lib_dir)
   if not os.path.exists(lib_dir):
     print('create lib dir')
     os.makedirs(lib_dir)
